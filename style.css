@@ -1,0 +1,179 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html, body{
+    width:100%;
+    height:100%;
+    font-family:'Segoe UI',sans-serif;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ffb6d5,#a7c7ff);
+    overscroll-behavior:none;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+}
+
+/* ================= CARD ================= */
+.card{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:380px;
+    background:rgba(255,255,255,0.9);
+    padding:22px;
+    border-radius:26px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(255,105,180,0.35);
+    backdrop-filter:blur(12px);
+    z-index:10;
+}
+
+/* ================= BACKGROUND BLUR ================= */
+#bg-blur{
+    position:fixed;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    filter:blur(22px) brightness(0.9) saturate(1.1);
+    transform:scale(1.2);
+    transition:background-image 0.7s ease-in-out;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(255,182,213,0.45),
+        rgba(167,199,255,0.45)
+    );
+    z-index:-1;
+}
+
+/* ================= PHOTO ================= */
+#photo,#mainPhoto{
+    width:100%;
+    max-height:55vh;
+    object-fit:cover;
+    border-radius:20px;
+    margin-bottom:15px;
+    box-shadow:0 10px 25px rgba(111,168,255,0.35);
+    transition:opacity .6s ease, transform .6s ease;
+}
+
+/* ================= TEXT ================= */
+h1{ color:#ff5fa2; }
+
+h2{
+    color:#555;
+    font-size:16px;
+    min-height:60px;
+}
+
+/* ================= BUTTON ================= */
+button{
+    margin-top:14px;
+    padding:12px 24px;
+    border:none;
+    border-radius:22px;
+    background:linear-gradient(135deg,#ff77b7,#6fa8ff);
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(255,105,180,0.35);
+    transition:.25s ease;
+}
+
+button:hover{
+    transform:scale(1.07);
+    box-shadow:0 12px 26px rgba(111,168,255,0.55);
+}
+
+/* ================= HEARTS ================= */
+.hearts span{
+    position:fixed;
+    bottom:-20px;
+    font-size:16px;
+    opacity:.6;
+    animation:floatHeart linear infinite;
+    pointer-events:none;
+}
+
+@keyframes floatHeart{
+    0%{transform:translateY(0) scale(.8);opacity:0}
+    10%{opacity:.6}
+    100%{transform:translateY(-110vh) scale(1.4);opacity:0}
+}
+
+/* ================= FLOWERS ================= */
+.flowers span{
+    position:fixed;
+    bottom:-30px;
+    font-size:18px;
+    opacity:.6;
+    animation:floatFlower linear infinite;
+    pointer-events:none;
+    filter:blur(.3px);
+}
+
+@keyframes floatFlower{
+    0%{transform:translateY(0) translateX(0) rotate(0);opacity:0}
+    10%{opacity:.6}
+    100%{transform:translateY(-110vh) translateX(40px) rotate(360deg);opacity:0}
+}
+
+/* ================= FIREWORKS ================= */
+#fireworks{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* ================= ANIMATION HELPERS ================= */
+.fade-out{
+    opacity:0;
+    transform:scale(.97);
+}
+
+.fade-in{
+    opacity:1;
+    transform:scale(1);
+}
+
+.hidden{display:none}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:420px){
+    h2{font-size:15px}
+}
+
+.fade-out{
+    opacity:0;
+    transform: scale(0.97);
+    transition: 0.4s ease;
+}
+
+.hearts span, .flowers span{
+    position: fixed;
+    bottom: -30px;
+    animation: float 12s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}

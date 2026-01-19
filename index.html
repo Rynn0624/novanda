@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Happy Birthday 🤍</title>
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#ff77b7">
+</head>
+<body>
+
+<div id="bg-blur"></div>
+<div class="hearts"></div>
+<div class="flowers"></div>
+
+<audio id="music" src="media/edo.mp3" loop></audio>
+
+<!-- OPENING -->
+<div id="opening" class="card">
+    <h1>Masukkan Tanggal Lahirmu 🎂</h1>
+    <input type="date" id="birthday">
+    <button onclick="celebrate()">Rayakan 🎉</button>
+</div>
+
+<!-- MAIN SLIDE -->
+<div id="main" class="card hidden">
+    <img id="photo" src="photos/1.jpeg">
+    <h2 id="text"></h2>
+    <button id="nextBtn" onclick="nextSlide()">Next Cantik 💖</button>
+    <button id="finishBtn" class="hidden" onclick="goToClosing()">Penutup 🤍</button>
+</div>
+
+<!-- CLOSING -->
+<div id="closing" class="card hidden">
+    <h1>I PROUD OF YOU 🤍</h1>
+    <h2>
+        Selamat ulang tahun cantik walaupun kita udah ga bersama sama i hope<br>
+you always to be happy, i loved you and i will always support you from afar, <br>
+terimakasi sudah jadi bagian kisah hidup ku, you my favorite person🫶<br>
+
+Bahagia terus yahh🐻
+    </h2>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
