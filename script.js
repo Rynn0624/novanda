@@ -12,12 +12,13 @@ const nextBtn = document.getElementById("nextBtn");
 const finishBtn = document.getElementById("finishBtn");
 
 const slides = [
- { text:"Selamat ulang tahun yang ke 20 🤍 semoga selalu ceria 🙈", photo:"photos/1.jpeg" },
- { text:"Some flowers for you 💐💐", photo:"photos/2.jpeg" },
- { text:"Today is your birthday 🤍 semoga semua wishlist kamu tercapai", photo:"photos/3.jpeg" },
- { text:"Di foto ini kamu lucu banget 😆 aku suka senyum kamu", photo:"photos/4.jpeg" },
- { text:"🐻🤍🐻🤍", photo:"photos/6.jpeg" },
- { text:"One more happy birthday 🎊 semoga bahagia selalu 🤍", photo:"photos/5.jpeg" }
+{ text:"Hai cantik selamat ulang tahun yaa🎊🎊🎉🎉🥳", photo:"photos/aa.jpeg" },
+{ text:"Selamat ulang tahun yang ke 20 🤍 semoga selalu ceria 🙈", photo:"photos/1.jpeg" },
+{ text:"Some flowers for you 💐💐", photo:"photos/2.jpeg" },
+{ text:"Today is your birthday 🤍 semoga semua wishlist kamu tercapai", photo:"photos/3.jpeg" },
+{ text:"Di foto ini kamu lucu banget 😆 aku suka senyum kamu", photo:"photos/4.jpeg" },
+{ text:"🐻🤍🐻🤍", photo:"photos/6.jpeg" },
+{ text:"One more happy birthday 🎊 semoga bahagia selalu 🤍", photo:"photos/5.jpeg" }
 ];
 
 let index = 0;
@@ -98,3 +99,4 @@ function startFlowers(){
         setTimeout(()=>flower.remove(),15000);
     },1500);
 }
+
